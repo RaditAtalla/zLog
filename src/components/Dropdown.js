@@ -75,7 +75,6 @@ const styles = StyleSheet.create({
   },
   item: {
     fontSize: 12,
-
   }
 });
 

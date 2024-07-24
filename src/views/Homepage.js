@@ -1,11 +1,9 @@
 import {
-  Button,
   Layout,
   Text,
   useStyleSheet,
   useTheme,
 } from '@ui-kitten/components';
-import {Image} from 'react-native';
 import globalStyles from '../style/styles';
 import RootLayout from '../components/RootLayout';
 import Menu from '../components/Menu';
@@ -26,12 +24,11 @@ const Homepage = ({navigation}) => {
         </Text>
         Rachmad
       </Text>
-      <Layout>
-        <Layout style={{flexDirection: 'row', marginBottom: 10}}>
+      <Layout style={{ gap: 10 }}>
+        <Layout style={{flexDirection: 'row', gap: 10,}}>
           <Menu
             title={'SPP'}
             icon={require('../assets/img/archive.png')}
-            style={{marginRight: 10}}
             onPress={() => navigation.navigate('SPPpage')}
           />
           <Menu
@@ -40,11 +37,10 @@ const Homepage = ({navigation}) => {
             onPress={() => navigation.navigate('ApprovalPage')}
           />
         </Layout>
-        <Layout style={{flexDirection: 'row', marginBottom: 10}}>
+        <Layout style={{flexDirection: 'row', gap: 10}}>
           <Menu
             title={'Goods Receipt'}
             icon={require('../assets/img/archive.png')}
-            style={{marginRight: 10}}
             onPress={() => navigation.navigate('GoodsReceiptPage')}
           />
           <Menu

@@ -10,7 +10,7 @@ const AddGoodsReceiptPage = ({ navigation }) => {
       title={'Goods Receipt'}
       number={'#1'}
       style={{justifyContent: 'space-between'}}>
-      <View>
+      <View style={{ gap: 5 }}>
         <CustomInput
           label={'Item material:'}
           placeholder={'Item material...'}

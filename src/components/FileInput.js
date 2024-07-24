@@ -10,7 +10,7 @@ const FileInput = ({label, placeholder, required}) => {
   };
 
   return (
-    <View style={{ marginBottom: 5 }}>
+    <View>
       <Text style={styles.label}>
         {label}
         {required ? <Text style={{color: 'red'}}>*</Text> : null}

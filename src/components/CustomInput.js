@@ -7,7 +7,7 @@ import { TextInput } from 'react-native'
 
 const CustomInput = ({label, placeholder, keyboardType, required}) => {
   return (
-    <Layout style={{ marginBottom: 5, }}>
+    <Layout>
       <Text style={Styles.label}>{label}{required ? <Text style={{ color: 'red' }}>*</Text> : null}</Text>
       <TextInput
         style={Styles.input}

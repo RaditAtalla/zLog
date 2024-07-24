@@ -9,7 +9,7 @@ const GoodsReceiptPage = ({navigation}) => {
     <MenuLayout
       title={'Goods Receipt'}
       style={{justifyContent: 'space-between'}}>
-      <View>
+      <View style={{ gap: 5 }}>
         <CustomInput
           label={'Tanggal barang masuk:'}
           placeholder={'Tanggal barang masuk...'}

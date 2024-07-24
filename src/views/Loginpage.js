@@ -16,7 +16,7 @@ const Loginpage = ({navigation}) => {
 
   return (
     <RootLayout>
-      <Layout>
+      <Layout style={{ gap: 5 }}>
         <CustomInput label={'Nama:'} placeholder={'Nama...'} />
         <CustomInput
           label={'Nomor HP:'}
