@@ -1,16 +1,18 @@
-import React from 'react'
-import { View, StyleSheet } from 'react-native'
-import MenuLayout from '../components/MenuLayout'
-import { Button } from '@ui-kitten/components'
+import React from 'react';
+import {View, StyleSheet} from 'react-native';
+import MenuLayout from '../components/MenuLayout';
+import {Button} from '@ui-kitten/components';
 
 const InputMaterialKeluarPage = () => {
   return (
-    <MenuLayout title='Pencatatan Material Keluar' style={{ justifyContent: 'space-between' }}>
+    <MenuLayout
+      title="Pencatatan Material Keluar"
+      style={{justifyContent: 'space-between'}}>
       <View style={styles.pdfPreview}></View>
-      <Button style={{ alignSelf: 'flex-end', marginBottom: 10 }}>Submit</Button>
+      <Button style={styles.button}>Submit</Button>
     </MenuLayout>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   pdfPreview: {
@@ -18,7 +20,11 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     height: 300,
     width: '100%',
-  }
-})
+  },
+  button: {
+    alignSelf: 'flex-end',
+    marginBottom: 10,
+  },
+});
 
-export default InputMaterialKeluarPage
+export default InputMaterialKeluarPage;

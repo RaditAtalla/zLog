@@ -13,7 +13,7 @@ const Menu = ({ title, icon = '', style, isFull, onPress, size }) => {
         borderColor: theme['color-primary-500'],
         borderRadius: 5,
         minWidth: 160,
-        maxWidth: isFull ? '100%' : 160,
+        maxWidth: '100%',
         minHeight: size == 'small' ? 40 : 76,
         maxHeight: size == 'small' ? 40 : 76,
         justifyContent: 'center',

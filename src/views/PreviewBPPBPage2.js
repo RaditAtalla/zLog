@@ -7,7 +7,7 @@ const PreviewBPPBPage2 = () => {
   return (
     <MenuLayout title='Preview' style={{ justifyContent: 'space-between' }}>
       <View style={styles.pdfPreview}></View>
-      <Button style={{ alignSelf: 'flex-end', marginBottom: 10 }}>Ok</Button>
+      <Button style={styles.button}>Ok</Button>
     </MenuLayout>
   )
 }
@@ -18,7 +18,11 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     height: 300,
     width: '100%',
-  }
+  },
+  button: {
+    alignSelf: 'flex-end',
+    marginBottom: 10,
+  },
 })
 
 export default PreviewBPPBPage2

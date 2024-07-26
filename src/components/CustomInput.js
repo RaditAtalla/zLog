@@ -2,13 +2,15 @@ import {
   Layout,
   StyleService,
   Text,
+  useTheme
 } from '@ui-kitten/components';
 import { TextInput } from 'react-native'
 
 const CustomInput = ({label, placeholder, keyboardType, required}) => {
+  const theme = useTheme()
   return (
     <Layout>
-      <Text style={Styles.label}>{label}{required ? <Text style={{ color: 'red' }}>*</Text> : null}</Text>
+      <Text style={Styles.label}>{label}{required ? <Text style={{ color: theme['color-warning-500'] }}>*</Text> : null}</Text>
       <TextInput
         style={Styles.input}
         placeholder={placeholder}

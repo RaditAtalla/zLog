@@ -1,8 +1,13 @@
 import React from 'react';
 import DocumentPicker from 'react-native-document-picker';
 import {TouchableOpacity, Text, View, StyleSheet} from 'react-native';
+import { useStyleSheet, useTheme } from '@ui-kitten/components';
+
 
 const FileInput = ({label, placeholder, required}) => {
+  const theme = useTheme()
+  const styles = useStyleSheet(themedStyles)
+
   const handleClick = () => {
     const pickedFile = DocumentPicker.pickSingle({
       type: [DocumentPicker.types.allFiles],
@@ -13,7 +18,7 @@ const FileInput = ({label, placeholder, required}) => {
     <View>
       <Text style={styles.label}>
         {label}
-        {required ? <Text style={{color: 'red'}}>*</Text> : null}
+        {required ? <Text style={{color: theme['color-warning-500']}}>*</Text> : null}
       </Text>
 
       <View style={styles.buttonContainer}>
@@ -27,7 +32,7 @@ const FileInput = ({label, placeholder, required}) => {
   );
 };
 
-const styles = StyleSheet.create({
+const themedStyles = StyleSheet.create({
   label: {
     fontSize: 12,
     fontFamily: 'Inter-Medium',
@@ -43,7 +48,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(207, 247, 250, 0.1)',
   },
   button: {
-    backgroundColor: '#1960A7',
+    backgroundColor: 'color-primary-500',
     paddingVertical: 10,
     paddingHorizontal: 35,
     borderRadius: 3,

@@ -1,12 +1,15 @@
 import React from 'react';
-import {View} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import MenuLayout from '../components/MenuLayout';
 import CustomInput from '../components/CustomInput';
-import { Button } from '@ui-kitten/components';
+import {Button} from '@ui-kitten/components';
 
-const BPPBPage = ({ navigation }) => {
+const BPPBPage = ({navigation}) => {
   return (
-    <MenuLayout title="BPPB" number="#1" style={{justifyContent: 'space-between'}}>
+    <MenuLayout
+      title="BPPB"
+      number="#1"
+      style={{justifyContent: 'space-between'}}>
       <View>
         <CustomInput
           label={'Item material:'}
@@ -31,15 +34,9 @@ const BPPBPage = ({ navigation }) => {
           required
         />
       </View>
-      <View
-        style={{
-          flexDirection: 'row',
-          justifyContent: 'flex-end',
-          marginBottom: 10,
-        }}>
+      <View style={styles.buttonContainer}>
         <Button
           appearance="outline"
-          style={{marginRight: 10}}
           onPress={() => navigation.navigate('PreviewBPPBPage')}>
           Finish
         </Button>
@@ -48,5 +45,14 @@ const BPPBPage = ({ navigation }) => {
     </MenuLayout>
   );
 };
+
+const styles = StyleSheet.create({
+  buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    marginBottom: 10,
+    gap: 10,
+  },
+});
 
 export default BPPBPage;

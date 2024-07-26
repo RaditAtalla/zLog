@@ -1,31 +1,23 @@
 import {
   Layout,
+  StyleService,
   Text,
   useStyleSheet,
-  useTheme,
 } from '@ui-kitten/components';
-import globalStyles from '../style/styles';
 import RootLayout from '../components/RootLayout';
 import Menu from '../components/Menu';
 
 const Homepage = ({navigation}) => {
-  const styles = useStyleSheet(globalStyles);
-  const theme = useTheme();
+  const styles = useStyleSheet(themedStyles)
 
   return (
     <RootLayout title={'more'}>
       <Text style={styles.title}>
-        <Text
-          style={{
-            fontFamily: 'Inter-Medium',
-            color: theme['color-primary-300'],
-          }}>
-          Welcome,{'\n'}
-        </Text>
+        <Text style={styles.subTitle}>Welcome,{'\n'}</Text>
         Rachmad
       </Text>
-      <Layout style={{ gap: 10 }}>
-        <Layout style={{flexDirection: 'row', gap: 10,}}>
+      <Layout style={{gap: 10}}>
+        <Layout style={styles.rowContainer}>
           <Menu
             title={'SPP'}
             icon={require('../assets/img/archive.png')}
@@ -37,7 +29,7 @@ const Homepage = ({navigation}) => {
             onPress={() => navigation.navigate('ApprovalPage')}
           />
         </Layout>
-        <Layout style={{flexDirection: 'row', gap: 10}}>
+        <Layout style={styles.rowContainer}>
           <Menu
             title={'Goods Receipt'}
             icon={require('../assets/img/archive.png')}
@@ -59,5 +51,24 @@ const Homepage = ({navigation}) => {
     </RootLayout>
   );
 };
+
+const themedStyles = StyleService.create({
+  title: {
+    marginBottom: 50,
+    fontSize: 36,
+    fontFamily: 'Inter-Bold',
+    color: 'color-primary-500',
+    textAlign: 'center',
+  },
+  subTitle: {
+    fontFamily: 'Inter-Medium',
+    color: 'color-primary-300',
+    fontSize: 20,
+  },
+  rowContainer: {
+    flexDirection: 'row',
+    gap: 10,
+  },
+});
 
 export default Homepage;

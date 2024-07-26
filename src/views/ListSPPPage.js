@@ -1,10 +1,12 @@
 import React from 'react'
-import { Text, StyleSheet, View, ScrollView, FlatList } from 'react-native'
+import { Text, View, ScrollView, FlatList } from 'react-native'
 import MenuLayout from '../components/MenuLayout'
 import Menu from '../components/Menu'
-import { Button, Icon } from '@ui-kitten/components'
+import { Button, Icon, StyleService, useStyleSheet } from '@ui-kitten/components'
 
 const ListSPPPage = ({navigation}) => {
+  const styles = useStyleSheet(themedStyles)
+
   return (
     <MenuLayout title='List SPP' style={{ justifyContent: 'space-between' }}>
       <ScrollView>
@@ -37,11 +39,11 @@ const ListSPPPage = ({navigation}) => {
   )
 }
 
-const styles = StyleSheet.create({
+const themedStyles = StyleService.create({
   date: {
     fontSize: 20,
     fontFamily: 'Inter-Medium',
-    color: '#6FB5E4',
+    color: 'color-primar-300',
     marginBottom: 10,
   },
   menu: {

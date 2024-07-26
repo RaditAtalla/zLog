@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import MenuLayout from '../components/MenuLayout';
 import CustomInput from '../components/CustomInput';
 import {Button} from '@ui-kitten/components';
@@ -9,7 +9,7 @@ const GoodsReceiptPage = ({navigation}) => {
     <MenuLayout
       title={'Goods Receipt'}
       style={{justifyContent: 'space-between'}}>
-      <View style={{ gap: 5 }}>
+      <View style={{gap: 5}}>
         <CustomInput
           label={'Tanggal barang masuk:'}
           placeholder={'Tanggal barang masuk...'}
@@ -32,12 +32,19 @@ const GoodsReceiptPage = ({navigation}) => {
         />
       </View>
       <Button
-        style={{alignSelf: 'flex-end', marginBottom: 10}}
+        style={styles.buttonContainer}
         onPress={() => navigation.navigate('AddGoodsReceiptPage')}>
         Next
       </Button>
     </MenuLayout>
   );
 };
+
+const styles = StyleSheet.create({
+  buttonContainer: {
+    alignSelf: 'flex-end',
+    marginBottom: 10,
+  },
+});
 
 export default GoodsReceiptPage;

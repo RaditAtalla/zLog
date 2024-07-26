@@ -1,6 +1,5 @@
-import {Icon} from '@ui-kitten/components';
-import React, {useState} from 'react';
-import {TouchableOpacity, View, Text, StyleSheet} from 'react-native';
+import React from 'react';
+import {View, Text, StyleSheet} from 'react-native';
 import {Dropdown as DropdownList} from 'react-native-element-dropdown';
 
 const Dropdown = ({label, placeholder}) => {
